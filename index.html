@@ -158,20 +158,5 @@
         window.onload = renderMenu;
     </script>
 </body>
-</html>     
+</html>    
 
-// Tani waa farriinta otomaatigga ah ee WhatsApp-ka
-function redirectToWhatsApp() {
-    const lambarka = "252613040087"; // Lambarkaaga WhatsApp-ka
-    
-    // Farriinta loo dirayo Eng Abdirahman
-    const farriin = "Asc Eng Abdirahman Abdirizaq,\n\n" + 
-                    "Waxaan rabaa inaan ku biiro GIFTUHUB Academy. 🎓\n" +
-                    "Waxaan bixiyey lacagta diiwaangelinta ee $5.\n" +
-                    "Halkan waa Screenshot-ka caddeynta lacagta.\n\n" +
-                    "Fadlan ii fura casharrada Phase 1, 2, iyo 3. Mahadsanid!";
-
-    const link = `https://wa.me/${lambarka}?text=${encodeURIComponent(farriin)}`;
-    
-    window.open(link, '_blank');
-}
