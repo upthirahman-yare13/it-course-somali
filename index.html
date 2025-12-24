@@ -3,88 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman-Yare | Affiliate Hub</title>
+    <title>Aman-Yare | AliExpress Hub</title>
     <style>
-        body {
-            background-color: #0b0f19;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            margin: 0; padding: 0;
-            transition: opacity 0.5s;
-        }
-        .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px; }
+        :root { --primary: #10b981; --dark-bg: #0b0f19; --card-bg: #111827; }
+        body { background-color: var(--dark-bg); color: white; font-family: sans-serif; margin: 0; padding: 0; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 20px; }
         
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(135deg, #111827 0%, #0b0f19 100%);
-            padding: 80px 20px;
-            text-align: center;
-            border-radius: 24px;
-            border: 1px solid #1f2937;
-            margin-bottom: 50px;
-        }
-        #main-title { font-size: 3rem; color: #10b981; margin: 10px 0; transition: opacity 0.5s; }
-        #sub-text { color: #9ca3af; font-size: 1.1rem; transition: opacity 0.5s; }
-        
-        .btn-whatsapp {
-            background-color: #10b981;
-            color: white;
-            padding: 18px 35px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 25px;
-        }
+        /* Hero Section */
+        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #111827, #0b0f19); border-bottom: 1px solid #1f2937; }
+        #main-title { font-size: 2.5rem; color: var(--primary); margin: 0; transition: opacity 0.5s; }
+        #sub-text { color: #9ca3af; margin: 15px 0; transition: opacity 0.5s; }
+        .btn-wa { background: var(--primary); color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; }
 
-        /* PRODUCT GRID */
-        .section-title { color: #10b981; border-right: 5px solid #10b981; padding-right: 15px; text-align: right; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .product-card {
-            background: #111827;
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #1f2937;
-        }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; }
-        .buy-btn {
-            background: #2563eb;
-            color: white;
-            display: block;
-            padding: 12px;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
+        /* Categories Section */
+        .category-title { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 10px; margin: 40px 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        /* Product Card */
+        .card { background: var(--card-bg); border-radius: 15px; padding: 15px; border: 1px solid #1f2937; text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; }
+        .price { color: var(--primary); font-size: 1.2rem; font-weight: bold; margin: 10px 0; }
+        .buy-btn { background: #2563eb; color: white; display: block; padding: 10px; text-decoration: none; border-radius: 5px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    
-    <section class="hero">
-        <div style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 5px 15px; border-radius: 50px; display: inline-block; font-size: 0.8rem; font-weight: bold;">
-            2025 STRATEGY
-        </div>
-        <h1 id="main-title">Baro Affiliate Marketing</h1>
-        <p id="sub-text">Xirfadda ugu mushaharka badan sanadka 2025. Nagala soo xiriir WhatsApp si aad u bilaawdo.</p>
-        <a href="https://wa.me/252613040087" class="btn-whatsapp">Nala Soo Xiriir (WhatsApp)</a>
-    </section>
+<div class="hero">
+    <h1 id="main-title">Baro Affiliate Marketing</h1>
+    <p id="sub-text">Xirfadda ugu mushaharka badan sanadka 2025.</p>
+    <a href="https://wa.me/252613040087" class="btn-wa">Nagala soo xiriir WhatsApp</a>
+</div>
 
-    <h2 class="section-title">Alaabta ugu iibsiga badan</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?w=400" alt="Watch">
-            <h3>Smart Watch Series 9</h3>
-            <p>AliExpress Affiliate</p>
-            <a href="https://portals.aliexpress.com" class="buy-btn">Hadda Iibso</a>
+<div class="container">
+
+    <h2 class="category-title">Qalabka Elektaroonigga (Tech Gadgets)</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=400" alt="Phone">
+            <h3>Smartphone Case Luxury</h3>
+            <div class="price">$5.50</div>
+            <a href="LINK_GAAGA_ALIEXPRESS_HALKAN_GELI" class="buy-btn">Hadda Iibso</a>
         </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Headphones">
-            <h3>Wireless Headphones</h3>
-            <p>AliExpress Affiliate</p>
-            <a href="https://portals.aliexpress.com" class="buy-btn">Hadda Iibso</a>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400" alt="Earbuds">
+            <h3>Wireless Earbuds Pro</h3>
+            <div class="price">$12.00</div>
+            <a href="LINK_GAAGA_ALIEXPRESS_HALKAN_GELI" class="buy-btn">Hadda Iibso</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Watch">
+            <h3>Smart Watch Ultra</h3>
+            <div class="price">$19.99</div>
+            <a href="LINK_GAAGA_ALIEXPRESS_HALKAN_GELI" class="buy-btn">Hadda Iibso</a>
+        </div>
+    </div>
+
+    <h2 class="category-title">Agabka Guriga & Qurxinta</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400" alt="Home Decor">
+            <h3>LED Strip Lights (RGB)</h3>
+            <div class="price">$3.20</div>
+            <a href="LINK_GAAGA_ALIEXPRESS_HALKAN_GELI" class="buy-btn">Hadda Iibso</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=400" alt="Furniture">
+            <h3>Mini Vacuum Cleaner</h3>
+            <div class="price">$8.45</div>
+            <a href="LINK_GAAGA_ALIEXPRESS_HALKAN_GELI" class="buy-btn">Hadda Iibso</a>
         </div>
     </div>
 
@@ -92,48 +79,22 @@
 
 <script>
     const messages = [
-        {
-            title: "Dakhli Joogto Ah",
-            text: "Ma rabtaa inaad gurigaaga fariisato adoo dollar helaya?"
-        },
-        {
-            title: "Baro Affiliate Marketing",
-            text: "Xirfadda ugu mushaharka badan sanadka 2025. Nagala soo xiriir WhatsApp."
-        }
+        { title: "Dakhli Joogto Ah", text: "Ma rabtaa inaad gurigaaga fariisato adoo dollar helaya?" },
+        { title: "Baro Affiliate Marketing", text: "Xirfadda ugu mushaharka badan sanadka 2025. Nagala soo xiriir WhatsApp." }
     ];
-
     let i = 0;
     setInterval(() => {
         const titleTag = document.getElementById('main-title');
         const textTag = document.getElementById('sub-text');
-
-        titleTag.style.opacity = 0;
-        textTag.style.opacity = 0;
-
+        titleTag.style.opacity = 0; textTag.style.opacity = 0;
         setTimeout(() => {
             titleTag.innerText = messages[i].title;
             textTag.innerText = messages[i].text;
-            titleTag.style.opacity = 1;
-            textTag.style.opacity = 1;
+            titleTag.style.opacity = 1; textTag.style.opacity = 1;
             i = (i + 1) % messages.length;
         }, 500);
     }, 5000);
 </script>
 
 </body>
-</html>
-
-<section class="partners">
-        <h3 style="color: #9ca3af; font-size: 0.9rem; text-transform: uppercase;">Shirkadaha aan la shaqayno</h3>
-        <div class="partner-list">
-            <span>ALIEXPRESS</span>
-            <span>AMAZON</span>
-            <span>CANVA</span>
-            <span>HOSTINGER</span>
-        </div>
-    </section>
-
-</div>
-
-</body>
-</html>
+    </html>
