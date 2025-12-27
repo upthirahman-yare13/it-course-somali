@@ -6,88 +6,107 @@
     <title>Fatxi Ubuukar Cali - Professional Portfolio 👑</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #D4AF37; --pink: #FF4D6D; --black: #050505; --dark-gray: #111; }
-        body { font-family: 'Poppins', sans-serif; background: var(--black); color: white; margin: 0; text-align: center; overflow-x: hidden; line-height: 1.6; }
+        :root { --gold: #D4AF37; --pink: #FF4D6D; --black: #050505; --card-bg: #111; }
+        body { font-family: 'Poppins', sans-serif; background: var(--black); color: white; margin: 0; text-align: center; line-height: 1.6; }
         
-        /* Rose Petals */
         .petal { position: fixed; top: -10%; color: var(--pink); user-select: none; z-index: 1000; pointer-events: none; animation: fall linear forwards; }
         @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
 
-        /* Header */
-        .header { padding: 80px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504813184591-01592f259ee2?q=80&w=1200'); background-size: cover; border-bottom: 2px solid var(--gold); }
+        /* Header Area */
+        .hero { padding: 100px 20px; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1576091160550-2173dad99901?q=80&w=1200'); background-size: cover; border-bottom: 3px solid var(--gold); }
         .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--gold); box-shadow: 0 0 30px var(--gold); object-fit: cover; }
         h1 { font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: var(--gold); margin: 15px 0; }
-        .tagline { font-size: 1.1rem; color: #ddd; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* CV Section */
-        .cv-section { padding: 50px 20px; max-width: 800px; margin: 0 auto; text-align: left; }
-        .card { background: var(--dark-gray); border-radius: 20px; padding: 30px; border-left: 5px solid var(--gold); margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
-        .card h3 { color: var(--gold); margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        .skill-tag { display: inline-block; background: rgba(212, 175, 55, 0.2); color: var(--gold); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin: 5px; border: 1px solid var(--gold); }
+        /* Main Content Wrapper */
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; text-align: left; }
+        
+        /* CV Card Style */
+        .cv-card { background: var(--card-bg); padding: 30px; border-radius: 20px; border-left: 5px solid var(--gold); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .cv-card h2 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; font-family: 'Dancing Script', cursive; font-size: 2.2rem; }
+        
+        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .skill-item { background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold); padding: 5px 15px; border-radius: 50px; font-size: 0.85rem; }
 
-        /* Trading Section */
-        .trading-box { background: linear-gradient(45deg, #111, #1a1a1a); border: 1px dashed var(--gold); padding: 30px; border-radius: 20px; margin-top: 20px; text-align: center; }
-        .strategy-badge { background: var(--gold); color: black; padding: 10px 20px; border-radius: 10px; font-weight: bold; font-size: 1.2rem; display: inline-block; margin-top: 10px; }
+        /* Scholarship Section */
+        .scholarship-box { background: linear-gradient(45deg, #111, #1a1a1a); border: 1px dashed var(--gold); padding: 25px; border-radius: 20px; margin-top: 20px; }
+        
+        /* Buttons */
+        .btn-wa { background: var(--gold); color: black; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; display: block; width: 100%; text-align: center; text-decoration: none; margin-top: 20px; }
+        .btn-wa:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(212,175,55,0.4); }
 
-        /* Action Buttons */
-        .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
-        .action-btn { background: transparent; border: 1px solid var(--gold); color: white; padding: 15px; border-radius: 12px; cursor: pointer; transition: 0.3s; font-family: inherit; font-weight: 600; }
-        .action-btn:hover { background: var(--gold); color: black; }
-
-        .footer { padding: 40px; color: var(--gold); font-family: 'Dancing Script', cursive; font-size: 24px; opacity: 0.8; }
+        .footer { padding: 50px; opacity: 0.6; text-align: center; font-size: 0.8rem; border-top: 1px solid #222; }
     </style>
 </head>
 <body>
 
-    <div class="header">
+    <div class="hero">
         <img src="https://i.ibb.co/3ykG8Lw/IMG-20250912-WA0005.jpg" class="profile-img">
-        <h1>Fatxi Ubuukar Cali ❤️</h1>
-        <p class="tagline">Nursing | Midwifery | Psychology | Master Trader</p>
+        <h1>Fatxi Ubuukar Cali</h1>
+        <p style="letter-spacing: 2px;">Professional CV & Academic Portfolio</p>
     </div>
 
-    <div class="cv-section">
-        <div class="card">
-            <h3>🩺 Health & Medical Journey</h3>
-            <p>Fatxi waa gabadh u heellan daryeelka bulshada, gaar ahaan qaybaha ugu muhiimsan caafimaadka:</p>
-            <div>
-                <span class="skill-tag">Nursing</span>
-                <span class="skill-tag">Umuliso (Midwifery)</span>
-                <span class="skill-tag">Psychology</span>
-                <span class="skill-tag">Health Leadership</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>📈 Financial Markets & Strategy</h3>
-            <p>Xirfadda Fatxi kuma koobna caafimaadka oo qura, ee waa ganacsade aqoon u leh suuqyada dhaqaalaha.</p>
-            <div class="trading-box">
-                <p>Trading Strategy:</p>
-                <div class="strategy-badge">LAW AND ORDER STRATEGY ⚖️</div>
-                <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Precision. Patience. Success.</p>
-            </div>
-        </div>
-
-        <h2 style="color: var(--gold); text-align: center; font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-top: 50px;">Su'aalaha Upthirahmaan 🤔</h2>
-        <p style="text-align: center;">Fatxi, sidee ayaad u aragtaa mustaqbalka Upthirahmaan?</p>
+    <div class="container">
         
-        <div class="btn-group">
-            <button class="action-btn" onclick="sendToUpthi('Fatxi waxay tiri: Waxaad tahay ninkii aan noloshayda ku aaminay 😍')">Qofka aan noloshayda ku aaminay 😍</button>
-            <button class="action-btn" onclick="sendToUpthi('Fatxi waxay tiri: Waxaad tahay saaxiibkayga qaaliga ah 🤝')">Saaxiibkayga qaaliga ah 🤝</button>
-            <button class="action-btn" onclick="sendToUpthi('Fatxi waxay tiri: Waxaad tahay qofka igu dhiirigeliya guusha 🚀')">Midka aan guusha la wadaago 🚀</button>
-            <button class="action-btn" onclick="sendToUpthi('Fatxi waxay tiri: Waxaad tahay dunidayda oo dhan 🌎')">Dunidayda oo dhan 🌎</button>
+        <div class="cv-card">
+            <h2>🩺 Medical Background</h2>
+            <p>Xirfadle caafimaad oo aqoon durugsan u leh daryeelka hooyada iyo dhallaanka.</p>
+            <ul style="list-style: none; padding: 0;">
+                <li>🎓 <b>Diploma:</b> Nursing & Midwifery (Professional Umuliso)</li>
+                <li>🧠 <b>Expertise:</b> Clinical Psychology & Patient Counseling</li>
+            </ul>
+            <div class="skill-list">
+                <span class="skill-item">Maternal Care</span>
+                <span class="skill-item">Mental Health Support</span>
+                <span class="skill-item">Clinical Nursing</span>
+                <span class="skill-item">Patient Advocacy</span>
+            </div>
         </div>
+
+        <div class="cv-card">
+            <h2>📈 Financial Trading mastery</h2>
+            <p>Xirfadle dhinaca maaliyadda ah oo ku takhasusay falanqaynta suuqyada caalamiga ah.</p>
+            <p><b>Strategy:</b> <span style="color: var(--gold); font-weight: bold;">LAW AND ORDER STRATEGY ⚖️</span></p>
+            <div class="skill-list">
+                <span class="skill-item">Market Analysis</span>
+                <span class="skill-item">Risk Management</span>
+                <span class="skill-item">Strategic Planning</span>
+            </div>
+        </div>
+
+        <div class="cv-card">
+            <h2>🎓 2026 Scholarship Goals (Jan/Feb)</h2>
+            <p>Fatxi waxay hadda u taagan tahay inay codsato deeqaha waxbarasho ee caalamiga ah ee dhowaan furmaya.</p>
+            <div class="scholarship-box">
+                <h4 style="margin: 0; color: var(--gold);">Target Programs:</h4>
+                <ul style="font-size: 0.9rem; padding-left: 20px;">
+                    <li>Advanced Nursing Studies (Turkey/Europe)</li>
+                    <li>Global Health & Midwifery Excellence</li>
+                    <li>Financial Psychology & Investment</li>
+                </ul>
+                <a href="#" class="btn-wa" onclick="sendToUpthi('Haye Upthirahmaan, waxaan rabaa inaan xareeyo Scholarship bisha 1-aad ama 2-aad.')">Xaree Codsiga Scholarship 🚀</a>
+            </div>
+        </div>
+
+        <div class="cv-card" style="background: rgba(212, 175, 55, 0.05);">
+            <h2>📝 Motivation Letter Preview</h2>
+            <p style="font-size: 0.85rem; font-style: italic; color: #ccc;">
+                "Being a Midwife is more than a job; it's a mission. My background in Psychology allows me to understand the fear and joy of a mother, providing care that heals both body and mind..."
+            </p>
+            <a href="#" class="btn-wa" style="background: transparent; border: 1px solid var(--gold); color: var(--gold);" onclick="sendToUpthi('Fadlan iigu soo dir Motivation Letter-ka oo dhammaystiran.')">Codso PDF Motivation Letter</a>
+        </div>
+
     </div>
 
     <div class="footer">
-        Made with ❤️ by Upthirahmaan for Fatxi Ubuukar Cali
+        © 2025 Portfolio for Fatxi Ubuukar Cali <br>
+        Developed by Upthirahmaan | Contact: 613040087
     </div>
 
     <script>
         const myWhatsApp = "252613040087";
 
-        function sendToUpthi(text) {
-            const finalMsg = encodeURIComponent(text);
-            window.open(`https://wa.me/${myWhatsApp}?text=${finalMsg}`, '_blank');
+        function sendToUpthi(msg) {
+            window.open(`https://wa.me/${myWhatsApp}?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         // Falling Flowers
