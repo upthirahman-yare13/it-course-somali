@@ -3,84 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Queen Rumaan 🌹</title>
+    <title>Surprise for Rumaan 🎁</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; background: #050505; color: white; font-family: 'Playfair Display', serif; overflow: hidden; }
+        body { margin: 0; background: #050505; color: white; font-family: 'Playfair Display', serif; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 100vh; }
         
         /* Falling Rose Petals */
         .petal { position: fixed; top: -10%; color: #ff4d6d; user-select: none; z-index: 1000; pointer-events: none; animation: fall linear forwards; }
         @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
 
-        .container { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle, #1a0a0a 0%, #050505 100%); }
+        /* Gift Box Styles */
+        .gift-container { text-align: center; cursor: pointer; transition: 0.5s; }
+        .gift-box { font-size: 100px; transition: transform 0.5s; animation: shake 2s infinite; }
+        @keyframes shake { 0%, 100% { transform: rotate(0); } 10%, 30%, 50% { transform: rotate(10deg); } 20%, 40% { transform: rotate(-10deg); } }
+        
+        #surprise-content { display: none; text-align: center; animation: zoomIn 0.8s; }
+        @keyframes zoomIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-        /* Heart Profile */
         .heart-frame {
-            position: relative; width: 250px; height: 250px;
+            width: 200px; height: 200px; margin: 0 auto;
             background: url('https://i.ibb.co/3ykG8Lw/IMG-20250912-WA0005.jpg');
             background-size: cover; background-position: center;
             clip-path: path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z');
-            border: 4px solid #D4AF37; box-shadow: 0 0 50px #ff4d6d;
-            animation: heartbeat 1.5s infinite;
+            border: 3px solid #D4AF37; box-shadow: 0 0 30px #ff4d6d;
         }
-        @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
 
-        h1 { font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: #D4AF37; margin: 20px 0; }
-        .timer-display { color: #ffb3c1; font-size: 0.9rem; margin-bottom: 20px; opacity: 0.7; }
-
-        /* The Game */
-        .btn-container { display: flex; gap: 20px; justify-content: center; margin-top: 20px; position: relative; }
-        button { padding: 12px 35px; border-radius: 50px; border: none; font-size: 1.1rem; cursor: pointer; transition: 0.3s; font-family: inherit; }
-        #yesBtn { background: #ff4d6d; color: white; box-shadow: 0 0 20px #ff4d6d; }
-        #noBtn { background: #444; color: white; position: absolute; }
-
-        #final-msg { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 2000; flex-direction: column; align-items: center; justify-content: center; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3rem; color: #D4AF37; margin: 15px 0; }
+        .timer-info { color: #ffb3c1; font-size: 0.9rem; margin: 10px 0; font-style: italic; }
+        
+        .wa-btn { background: #25d366; color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 20px; font-family: inherit; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="timer-display">Waqtiga aad nolosheyda ku dhex jirtay: <span id="seconds">0</span> ilbiriqsi</div>
-        <div class="heart-frame"></div>
-        <h1>Rumaan ❤️</h1>
-        <p id="typewriter" style="max-width: 80%; color: #ffb3c1; min-height: 50px;"></p>
-
-        <div class="game-section">
-            <p style="color: #D4AF37;">Ma i jeceshahay, Boqoraddayda?</p>
-            <div class="btn-container">
-                <button id="yesBtn" onclick="showFinal()">HAA 😍</button>
-                <button id="noBtn" onmouseover="moveNo()">MAYA 😢</button>
-            </div>
-        </div>
+    <div id="gift-section" class="gift-container" onclick="openGift()">
+        <div class="gift-box">🎁</div>
+        <h2 style="color: #D4AF37;">Taabo (Touch) Hadiyaddaada, Rumaan!</h2>
+        <p style="font-size: 0.8rem; opacity: 0.6;">Special Surprise for You from Upthirahmaan</p>
     </div>
 
-    <div id="final-msg">
-        <h1 style="color: #ff4d6d;">I Knew It! ❤️</h1>
-        <p id="time-report"></p>
-        <button onclick="sendWA()" style="background: #25d366; color: white; margin-top: 20px;">WhatsApp iigu soo sheeg 😍</button>
+    <div id="surprise-content">
+        <div class="heart-frame"></div>
+        <h1>For My Queen Rumaan ❤️</h1>
+        <p style="max-width: 85%; margin: 0 auto; line-height: 1.5; color: #ffb3c1;">
+            "Rumaan, boggan waxaan kuu dhisay si aan kuu tuso sida aad ugu weyn tahay nolosheyda. Waxaad mudan tahay wax kasta oo qurux badan..."
+        </p>
+        <div class="timer-info">Waxaad boggan dhex joogtaa: <span id="timer">0</span> ilbiriqsi</div>
+        
+        <button class="wa-btn" onclick="sendResponse()">WhatsApp iigu jawaab 😍</button>
     </div>
 
     <script>
         let seconds = 0;
-        setInterval(() => {
-            seconds++;
-            document.getElementById('seconds').innerText = seconds;
-        }, 1000);
+        let timerStarted = false;
 
-        function moveNo() {
-            const btn = document.getElementById('noBtn');
-            btn.style.left = Math.random() * (window.innerWidth - 100) + 'px';
-            btn.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+        function openGift() {
+            document.getElementById('gift-section').style.display = 'none';
+            document.getElementById('surprise-content').style.display = 'block';
+            timerStarted = true;
+            startTimer();
         }
 
-        function showFinal() {
-            document.getElementById('final-msg').style.display = 'flex';
-            document.getElementById('time-report').innerText = `Waxaad eegaysay sawirkayga muddo ${seconds} ilbiriqsi ah!`;
+        function startTimer() {
+            setInterval(() => {
+                if(timerStarted) {
+                    seconds++;
+                    document.getElementById('timer').innerText = seconds;
+                }
+            }, 1000);
         }
 
-        function sendWA() {
+        function sendResponse() {
             const num = "252771941086";
-            const msg = `Haa Upthi, waan ku jeclahay! Waxaan bogga ku dhex jiray ${seconds} ilbiriqsi. ❤️`;
+            const msg = `Haye Upthirahmaan, waan arkay surprise-kaaga quruxda badan! Aad ayaad ugu mahadsantahay. ❤️ (Waan dhex joogay ${seconds} ilbiriqsi)`;
             window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
@@ -93,17 +88,6 @@
             document.body.appendChild(p);
             setTimeout(() => p.remove(), 5000);
         }, 300);
-
-        // Typewriter
-        const txt = "Adiga ayaa ah qofka ugu qaalisan ee nolosheyda soo gala...";
-        let j = 0;
-        function typing() {
-            if (j < txt.length) {
-                document.getElementById("typewriter").innerHTML += txt.charAt(j);
-                j++; setTimeout(typing, 100);
-            }
-        }
-        typing();
     </script>
 </body>
 </html>
