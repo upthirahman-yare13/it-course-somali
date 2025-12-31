@@ -3,56 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Zuhuur | PhD Researcher & Clinic Specialist</title>
+    <title>Dr. Zuhuur | PhD Medical Researcher & Super AI Bot</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --navy: #0a192f; --gold: #c5a059; --white: #ffffff; --grey: #f1f5f9; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; background: var(--white); color: var(--navy); scroll-behavior: smooth; overflow-x: hidden; }
         
         /* Navigation */
-        nav { padding: 15px 8%; background: var(--navy); color: white; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold); letter-spacing: 1px; }
+        nav { padding: 15px 8%; background: var(--navy); color: white; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold); }
 
-        /* Hero Section */
-        .hero { padding: 80px 8%; text-align: center; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-bottom: 5px solid var(--gold); }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 3.5rem); margin: 0; color: var(--navy); }
-        .hero p { font-size: 1.1rem; color: #475569; max-width: 700px; margin: 20px auto; }
+        /* Hero Section with PhD Girl Image */
+        .hero { padding: 60px 8%; text-align: center; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-bottom: 5px solid var(--gold); }
+        .hero-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid var(--gold); margin-bottom: 20px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); margin: 0; color: var(--navy); }
         
         .cta-container { margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
         .btn-tiktok { background: #000; color: white; }
         .btn-wa { background: #25d366; color: white; }
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
 
         /* Gallery Section */
-        .section-title { text-align: center; margin-top: 60px; font-family: 'Playfair Display', serif; font-size: 2rem; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 40px 8%; }
-        .gallery-item { border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #eee; transition: 0.3s; }
-        .gallery-item:hover { transform: scale(1.02); }
-        .gallery-item img { width: 100%; height: 250px; object-fit: cover; }
-        .gallery-item .desc { padding: 15px; text-align: center; font-weight: 600; background: var(--navy); color: white; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 8%; }
+        .gallery-item { border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; }
+        .gallery-item .desc { padding: 15px; text-align: center; font-weight: bold; background: var(--navy); color: white; }
 
-        /* Map Section */
-        .map-wrapper { padding: 40px 8%; background: var(--grey); }
-        .map-box { width: 100%; height: 450px; border-radius: 25px; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-
-        /* Chatbot Super AI */
+        /* Super Chatbot Interface */
         #chatbot-launcher { position: fixed; bottom: 30px; left: 30px; width: 70px; height: 70px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; z-index: 10000; font-size: 32px; box-shadow: 0 10px 30px rgba(197, 160, 89, 0.4); border: 3px solid white; }
-        #chat-window { position: fixed; bottom: 110px; left: 30px; width: 360px; background: white; border-radius: 25px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); display: none; flex-direction: column; z-index: 10000; border: 1px solid #eee; overflow: hidden; }
-        .chat-header { background: var(--navy); color: white; padding: 20px; font-weight: bold; display: flex; justify-content: space-between; border-bottom: 3px solid var(--gold); }
-        .chat-body { height: 450px; padding: 15px; overflow-y: auto; font-size: 0.9rem; background: #f9fbff; display: flex; flex-direction: column; gap: 12px; }
+        #chat-window { position: fixed; bottom: 110px; left: 30px; width: 350px; background: white; border-radius: 25px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); display: none; flex-direction: column; z-index: 10000; border: 1px solid #eee; overflow: hidden; }
+        .chat-header { background: var(--navy); color: white; padding: 18px; font-weight: bold; display: flex; justify-content: space-between; border-bottom: 3px solid var(--gold); }
+        .chat-body { height: 420px; padding: 15px; overflow-y: auto; font-size: 0.88rem; background: #f9fbff; display: flex; flex-direction: column; gap: 10px; }
         .chat-input-area { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; background: white; }
-        .chat-input-area input { flex: 1; padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 30px; outline: none; }
+        .chat-input-area input { flex: 1; padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 25px; outline: none; }
         
         .msg { padding: 12px 16px; border-radius: 18px; max-width: 85%; line-height: 1.5; }
         .bot-msg { background: white; color: var(--navy); align-self: flex-start; border: 1px solid #e2e8f0; }
         .user-msg { background: var(--navy); color: white; align-self: flex-end; }
         
         .chat-form { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-        .chat-form input { padding: 12px; border-radius: 10px; border: 1px solid #ddd; }
+        .chat-form input { padding: 10px; border-radius: 10px; border: 1px solid #ddd; }
         .chat-form button { background: var(--gold); color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-weight: bold; }
 
-        footer { padding: 40px; text-align: center; color: #94a3b8; font-size: 0.85rem; border-top: 1px solid #eee; }
+        .map-box { width: 100%; height: 400px; border-radius: 25px; overflow: hidden; border: 3px solid var(--gold); margin-top: 20px; }
+
+        footer { padding: 40px; text-align: center; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
@@ -62,72 +57,72 @@
         <div class="chat-header"><span>Dr. Zuhuur Medical AI</span><span onclick="toggleChat()" style="cursor:pointer">×</span></div>
         <div class="chat-body" id="chat-body">
             <div id="onboarding" class="msg bot-msg">
-                <b>Asc! Ku soo dhowaw Dr. Zuhuur Assistant.</b><br>
-                Fadlan geli magacaaga iyo lambarkaaga si aan kuugu gudbinno dhakhtarka:
+                <b>Asc! Waxaan ahay xog-hayaha caqliga badan ee Dr. Zuhuur.</b><br>
+                Fadlan geli magacaaga iyo lambarkaaga si aan kuugu diiwaangeliyo:
                 <div class="chat-form">
-                    <input type="text" id="u-name" placeholder="Magacaaga oo buuxa">
+                    <input type="text" id="u-name" placeholder="Magacaaga">
                     <input type="number" id="u-phone" placeholder="Lambarka WhatsApp">
                     <button onclick="registerUser()">Diiwaangeli & Bilow</button>
                 </div>
             </div>
         </div>
         <div class="chat-input-area" id="input-area" style="display:none;">
-            <input type="text" id="chat-input" placeholder="Qor xanuunka aad dareemayso..." onkeypress="if(event.key==='Enter') processChat()">
+            <input type="text" id="chat-input" placeholder="Weydii wax kasta oo caafimaad..." onkeypress="if(event.key==='Enter') processChat()">
         </div>
     </div>
 
     <nav><div class="logo">DR. ZUHUUR</div></nav>
 
     <section class="hero">
-        <h1>Dr. Zuhuur (PhD)</h1>
-        <p>Expert in Medical Research & Clinical Diagnosis. Waxaan bixinaa daryeel caafimaad oo ku dhisay cilmi-baaris caalami ah.</p>
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=500" alt="Dr. Zuhuur" class="hero-img">
+        <h1>PhD Medical Researcher</h1>
+        <p>Expert Diagnosis & Clinical Research. Waxaan ku takhasusay xanuunada raaga iyo daryeelka casriga ah.</p>
         <div class="cta-container">
-            <a href="https://vm.tiktok.com/ZMD2GHmXd/" class="btn btn-tiktok" target="_blank">Eeg TikTok-ga</a>
+            <a href="https://vm.tiktok.com/ZMD2GHmXd/" class="btn btn-tiktok" target="_blank">TikTok Profile</a>
             <a href="https://wa.me/252617911816" class="btn btn-wa" target="_blank">WhatsApp Direct</a>
         </div>
     </section>
 
-    <h2 class="section-title">Adeegyada & Xafiiska</h2>
     <section class="gallery-grid">
         <div class="gallery-item">
             <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=500" alt="Xafiiska">
-            <div class="desc">Xafiiska La-talinta VIP</div>
+            <div class="desc">Xafiiska VIP-da</div>
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1579152128802-7dc5a3ba57a4?q=80&w=500" alt="Qalabka">
+            <img src="https://images.unsplash.com/photo-1581594632702-fbdc51b2763b?q=80&w=500" alt="Qalabka">
             <div class="desc">Qalabka Baaritaanka Casriga ah</div>
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1504813184591-01592f259ee2?q=80&w=500" alt="Daryeelka">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=500" alt="Daryeelka">
             <div class="desc">Daryeelka Bukaan-socodka</div>
         </div>
     </section>
 
-    <section class="map-wrapper">
-        <h2 style="text-align:center; margin-bottom:20px; font-family:'Playfair Display';">Goobta Xafiiska: Daru-salaam</h2>
+    <div style="padding: 40px 8%; background: #f8fafc;">
+        <h2 style="text-align:center; font-family:'Playfair Display';">Xarunta Daru-salaam, Mogadishu</h2>
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.664421255476!2d45.289456749999994!3d2.07166135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d5843477144e597%3A0xc3f58e0a35c5938c!2sDaru-salaam%2C%20Mogadishu!5e0!3m2!1sen!2sso!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15951.0!2d45.3000!3d2.0333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDEnNTkuOSJOIDQ1wrAxOCcwMC4wIkU!5e0!3m2!1sen!2sso!4v17000000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        © 2025 DR. ZUHUUR | PhD Medical Researcher<br>
-        <span style="color:var(--gold); font-weight:bold;">DESIGNED BY UPTHIRAHMAAN</span>
-    </footer>
+    <footer>© 2025 DR. ZUHUUR | SYSTEM BY UPTHIRAHMAAN</footer>
 
     <script>
         let currentUser = { name: "", phone: "" };
         
+        // Comprehensive Medical Database (Sida Gemini oo kale)
         const medicalDB = {
-            "dhabar": "<b>Dhabar xanuun:</b> Ma wuxuu kugu bilaawday fadhiga badan mise wax culus ayaad qaadday? Waxaan bixinaa daaweynta jireed (Physiotherapy) iyo baaritaan dhinac kasta ah. La-talin PhD ah waa $50.",
-            "madax": "<b>Madax xanuun:</b> Ma dareemaysaa dawakhad ama riiq? Haddii uu yahay mid raagay, waa in lagaa baaro dhiig-karka. Panadol ($2.00) waa la hayaa.",
-            "calool": "<b>Calool xanuun:</b> Ma isku aragtay dibbiro ama laab-jeex? Baaritaanka H-Pylori (Gaastariga) waa $15.",
-            "qandho": "<b>Qandho:</b> Haddii aad isku aragto dhaxan iyo xubno xanuun, waa in lagaa baaro Duumada. Baaritaan degdeg ah waa la hayaa.",
-            "maqaar": "<b>Maqaarka:</b> Waxaan daaweynaa finanka, xasaasiyadda, iyo cudurada kale ee maqaarka ku dhaca.",
-            "ilkaha": "<b>Ilkaha:</b> Waxaan leenahay qayb gaar ah oo loogu talagalay nadiifinta iyo soo saarista ilkaha.",
-            "sokor": "<b>Sokorta & Dhiig-karka:</b> Waxaan bixinaa qorshe cunto iyo baaritaan joogto ah si loo kantaroolo cuduradaas.",
+            "dhabar": "<b>Dhabar xanuun:</b> Waxaa laga yaabaa inay tahay dhibaato dhanka neerfaha ama muruqyada. Dr. Zuhuur waxay bixisaa qorshe Physiotherapy ah. La-talin PhD ah waa $50.",
+            "madax": "<b>Madax xanuun:</b> Haddii uu raago, waxaa laga yaabaa inay tahay dhiig-kar ama indhaha. Panadol ($1.50) waa la heli karaa.",
+            "calool": "<b>Calool xanuun:</b> Ma dareemaysaa gaastariko mise dibbiro? Baaritaanka H-Pylori waa $15.",
+            "wadne": "<b>Wadne xanuun:</b> Wadne xanuunka waa khatar. Fadlan si degdeg ah u imaan xafiiska si EKG lagaaga qaado.",
+            "sokor": "<b>Sokorta:</b> Baaritaanka macaanka iyo qorshaha cuntada waxaa bixisa Dr. Zuhuur. Baaritaanku waa $5.",
+            "qandho": "<b>Qandho:</b> Waxaa laga yaabaa inay tahay Duumo ama Tiibi. Baaritaanka guud waa $30.",
+            "tallaal": "<b>Tallaalka:</b> Waxaan haynaa dhamaan tallaalada carruurta iyo kuwa dadka waaweyn.",
+            "maqaar": "<b>Maqaarka:</b> Finanka iyo xasaasiyadda waxaan u haynaa daawooyin PhD ah.",
+            "qiimaha": "<b>Qiimaha:</b> La-talin VIP: $50 | Baaritaan: $30 | Buugga Caafimaadka: $10. EVC: 617911816.",
             "location": "Xafiiskayagu wuxuu ku yaalaa Daru-salaam, Xafada Banana, Mogadishu.",
-            "qiimaha": "La-talin: $50 | Baaritaan: $30. Lacag bixinta: EVC Plus 617911816."
+            "asc": "Wacalaykum Salaam! Sideen kuu caawin karaa maanta?"
         };
 
         function toggleChat() {
@@ -138,10 +133,10 @@
         function registerUser() {
             let n = document.getElementById('u-name').value;
             let p = document.getElementById('u-phone').value;
-            if(!n || !p) return alert("Fadlan geli magaca iyo lambarka");
+            if(!n || !p) return alert("Fadlan geli xogtaada");
             currentUser.name = n; currentUser.phone = p;
             let body = document.getElementById('chat-body');
-            body.innerHTML += `<div class="msg bot-msg">Mahadsanid <b>${n}</b>! Hadda iisheeg waxaad dareemayso (tusaale: Dhabar xanuun, Qandho, ama Madax xanuun)?</div>`;
+            body.innerHTML += `<div class="msg bot-msg">Mahadsanid <b>${n}</b>. Hadda i weydii wax kasta oo caafimaad ah?</div>`;
             document.getElementById('onboarding').style.display = 'none';
             document.getElementById('input-area').style.display = 'flex';
             body.scrollTop = body.scrollHeight;
@@ -154,19 +149,19 @@
             if(!text) return;
             body.innerHTML += `<div class="msg user-msg">${input.value}</div>`;
             
-            let reply = "Waan ka xumahay, xogtaas hadda ma hayo. Ma rabtaa inaan xiriirkaaga u gudbiyo Dr. Zuhuur si ay si toos ah kaaga caawiso?";
+            let reply = "Waan ka xumahay, su'aashaas database-kayga hadda kuma jirto, laakiin waxaan u gudbinayaa Dr. Zuhuur.";
             for(let key in medicalDB) { if(text.includes(key)) { reply = medicalDB[key]; break; } }
 
             setTimeout(() => {
                 body.innerHTML += `<div class="msg bot-msg">${reply}</div>`;
-                body.innerHTML += `<div class="msg bot-msg" style="background:#e8f5e9">Ma rabtaa inaan xogtaada WhatsApp ugu diro Dr. Zuhuur? <br> <button onclick="sendToWA('${text}')" style="background:#25d366; color:white; border:none; padding:10px; border-radius:10px; cursor:pointer; margin-top:5px; font-weight:bold;">Haa, u dir WhatsApp</button></div>`;
+                body.innerHTML += `<div class="msg bot-msg" style="background:#e8f5e9">Ma u baahan tahay inaan xogtaada WhatsApp ugu diro Dr. Zuhuur? <br> <button onclick="sendToWA('${text}')" style="background:#25d366; color:white; border:none; padding:10px; border-radius:10px; cursor:pointer; margin-top:5px; font-weight:bold;">Haa, u dir WhatsApp</button></div>`;
                 body.scrollTop = body.scrollHeight;
             }, 600);
             input.value = "";
         }
 
         function sendToWA(problem) {
-            let msg = `Asc Dr. Zuhuur, waxaan ahay ${currentUser.name} (${currentUser.phone}). Waxaan websaytkaaga ka soo xiriiray anigoo isku arkay: ${problem}`;
+            let msg = `Asc Dr. Zuhuur, waxaan ahay ${currentUser.name} (${currentUser.phone}). Waxaan websaytkaaga ka raadiyey: ${problem}`;
             window.open(`https://wa.me/252617911816?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
