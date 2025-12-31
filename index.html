@@ -7,7 +7,7 @@
     <title>Dr. Zuhuur | PhD Medical Researcher & Consultant</title>
     <meta name="description" content="Dr. Zuhuur - Medical Researcher & Clinical Strategist. Bixinta adeegyo caafimaad oo heer PhD ah.">
     <meta property="og:title" content="Dr. Zuhuur | Professional Medical Portfolio">
-    <meta property="og:description" content="Adeegyo caafimaad iyo la-talin PhD level ah. Nagala soo xiriir: +252617911816">
+    <meta property="og:description" content="Bixinta adeegyo caafimaad iyo la-talin PhD level ah. Nagala soo xiriir: +252617911816">
     <meta property="og:image" content="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1000&auto=format&fit=crop">
     <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=100&auto=format&fit=crop">
 
@@ -24,6 +24,7 @@
         /* Hero Section */
         .hero { padding: 100px 8%; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-bottom: 5px solid var(--gold); }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 7vw, 4rem); margin: 0; }
+        .hero span { color: var(--gold); }
         .hero p { font-size: 1.2rem; max-width: 700px; color: #475569; margin: 20px 0; font-weight: 300; }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 5%; }
@@ -40,45 +41,35 @@
         .appointment-section { background: var(--soft-bg); padding: 50px; border-radius: 20px; border: 1px solid #e2e8f0; margin: 60px 0; }
         .form-group { margin-bottom: 15px; text-align: left; }
         .form-group label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.9rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-family: inherit; }
         .submit-btn { background: var(--navy); color: white; padding: 15px; border: none; width: 100%; border-radius: 8px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
+        .submit-btn:hover { background: var(--gold); }
 
-        /* Store Grid */
-        .store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .product { background: white; padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #e2e8f0; }
+        /* Store Section */
+        .store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .product { background: white; padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
         .price { font-size: 1.8rem; font-weight: 800; color: #b91c1c; margin: 15px 0; }
-        .buy-btn { background: var(--gold); color: var(--navy); padding: 14px 25px; text-decoration: none; display: block; border-radius: 8px; font-weight: 700; border: none; width: 100%; cursor: pointer; }
+        .buy-btn { background: var(--gold); color: var(--navy); padding: 14px 25px; text-decoration: none; display: block; border-radius: 8px; font-weight: 700; }
 
-        /* Thank You Modal */
-        .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:10001; justify-content:center; align-items:center; }
-        .modal-content { background:white; padding:40px; border-radius:20px; text-align:center; max-width:400px; }
-
-        /* Map Section */
+        /* Map Section - Darusalam Customization */
         .map-section { margin-top: 60px; text-align: center; }
-        .map-container { width: 100%; height: 350px; border-radius: 20px; overflow: hidden; border: 1px solid #e2e8f0; margin-top: 20px; }
+        .map-container { width: 100%; height: 350px; border-radius: 20px; overflow: hidden; border: 1px solid #e2e8f0; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .location-info { background: var(--soft-bg); padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid var(--gold); display: inline-block; text-align: left; }
 
-        /* Floating WhatsApp */
-        .float-wa { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; z-index: 9999; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); }
-
+        /* Contact Section */
         .contact-box { background: var(--navy); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-top: 60px; }
         .wa-btn { background: #25d366; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
+        .email-btn { background: white; color: var(--navy); padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin: 10px; }
+
+        /* WhatsApp Floating Button */
+        .float-wa { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+
         footer { padding: 40px; text-align: center; color: #94a3b8; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <a href="https://wa.me/252617911816" class="float-wa" target="_blank">💬</a>
-
-    <div id="thankYouModal" class="modal">
-        <div class="modal-content">
-            <span style="font-size: 50px;">✅</span>
-            <h2 style="font-family: 'Playfair Display';">Mahadsanid!</h2>
-            <p>Lacag bixintaadii waa lagu guulaystay. Fadlan guji badhanka hoose si aad ugu gudubto WhatsApp-ka Dr. Zuhuur oo aad u qaadato adeeggaaga.</p>
-            <a id="finalWhatsAppLink" href="#" class="wa-btn" style="width:100%; box-sizing:border-box;">Hadda hel Adeegga (WhatsApp)</a>
-            <br><br>
-            <button onclick="closeModal()" style="background:none; border:none; color:#aaa; cursor:pointer;">Xir daaqadda</button>
-        </div>
-    </div>
 
     <nav>
         <div class="logo">DR. ZUHUUR</div>
@@ -110,24 +101,6 @@
             </div>
         </div>
 
-        <h2 style="text-align: center; font-family: 'Playfair Display';">Dukaanka Online-ka (Store)</h2>
-        <div class="store-grid">
-            <div class="product">
-                <span style="font-size: 40px;">📂</span>
-                <h4>Medical Guide 2025</h4>
-                <div class="price">$10.00</div>
-                <p style="font-size: 0.8rem; margin-bottom: 15px;">EVC Plus: 617911816</p>
-                <button onclick="showThankYou('Medical Guide PDF')" class="buy-btn">Ku iibso EVC Plus</button>
-            </div>
-            <div class="product">
-                <span style="font-size: 40px;">🩺</span>
-                <h4>VIP Consultation</h4>
-                <div class="price">$50.00</div>
-                <p style="font-size: 0.8rem; margin-bottom: 15px;">EVC Plus: 617911816</p>
-                <button onclick="showThankYou('VIP Consultation')" class="buy-btn">Qabso Ballan</button>
-            </div>
-        </div>
-
         <div class="appointment-section">
             <h2 style="font-family: 'Playfair Display'; text-align: center; margin-bottom: 30px;">Ballan Qabsi (Book Appointment)</h2>
             <form id="appointmentForm">
@@ -140,6 +113,7 @@
                     <select id="p_service">
                         <option value="La-talin Caafimaad">La-talin Caafimaad ($50)</option>
                         <option value="Cilmi-baaris (Research)">Cilmi-baaris PhD Level</option>
+                        <option value="Iibsashada PDF">Iibsashada PDF Guide</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -150,40 +124,61 @@
             </form>
         </div>
 
+        <div class="store-grid">
+            <div class="product">
+                <span style="font-size: 40px;">📂</span>
+                <h4>Medical Guide 2025</h4>
+                <div class="price">$10.00</div>
+                <a href="https://wa.me/252617911816?text=Waxaan+rabaa+Medical+Guide+PDF+($10)" class="buy-btn">Ku iibso EVC Plus</a>
+            </div>
+            <div class="product">
+                <span style="font-size: 40px;">📅</span>
+                <h4>VIP Consultation</h4>
+                <div class="price">$50.00</div>
+                <a href="https://wa.me/252617911816?text=Waxaan+rabaa+ballan+la-talin+VIP+ah+($50)" class="buy-btn">Book Appointment</a>
+            </div>
+        </div>
+
         <div class="map-section">
             <h2 style="font-family: 'Playfair Display';">Office Location</h2>
-            <p>Daru-salaam, Dabaqyada Cusub, Mogadishu</p>
+            <div class="location-info">
+                <strong>Address:</strong> Degmada Daru-salaam, Dabaqyada Cusub<br>
+                <strong>City:</strong> Mogadishu, Somalia<br>
+                <strong>Office:</strong> Dr. Zuhuur Research Lab
+            </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1!2d45.2!3d2.1!" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15951.34005517208!2d45.2936935!3d2.098748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d584346747185bb%3A0xa1946050b1d3032d!2sDaru%20Salaam%20City!5e0!3m2!1sen!2sso!4v1700000000000!5m2!1sen!2sso" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
         </div>
 
         <div class="contact-box">
             <h2>Xafiiska Dr. Zuhuur</h2>
+            <p>Wixii faahfaahin dheeraad ah ama wada-shaqayn, fadlan nagala soo xiriir.</p>
             <a href="https://wa.me/252617911816" class="wa-btn">WhatsApp: +252 617911816</a>
+            <a href="mailto:contact@drzuhuur.com" class="email-btn">Email: contact@drzuhuur.com</a>
         </div>
     </div>
 
     <footer>
-        © 2025 DR. ZUHUUR | DESIGNED BY UPTHIRAHMAAN
+        © 2025 DR. ZUHUUR | PROFESSIONAL HEALTH PORTFOLIO <br>
+        DESIGNED & SECURED BY UPTHIRAHMAAN
     </footer>
 
     <script>
-        function showThankYou(serviceName) {
-            document.getElementById('thankYouModal').style.display = 'flex';
-            var waMessage = "Dr. Zuhuur, waxaan hadda bixiyay lacagta *" + serviceName + "*. Halkan waa Screenshot-ka lacagta. Fadlan iisoo dir adeegga.";
-            document.getElementById('finalWhatsAppLink').href = "https://wa.me/252617911816?text=" + encodeURIComponent(waMessage);
-        }
-
-        function closeModal() {
-            document.getElementById('thankYouModal').style.display = 'none';
-        }
-
         function sendToWhatsApp() {
             var name = document.getElementById("p_name").value;
             var service = document.getElementById("p_service").value;
             var message = document.getElementById("p_message").value;
-            var wa_message = "Hambalyo Dr. Zuhuur!%0ACodsi ballan oo cusub:%0A%0A*Magaca:* " + name + "%0A*Adeegga:* " + service + "%0A*Fariinta:* " + message;
+            
+            var wa_message = "Hambalyo Dr. Zuhuur!%0A" + 
+                             "Codsi ballan oo cusub:%0A%0A" + 
+                             "*Magaca:* " + name + "%0A" + 
+                             "*Adeegga:* " + service + "%0A" + 
+                             "*Fariinta:* " + message;
+            
             window.open("https://wa.me/252617911816?text=" + wa_message, "_blank");
         }
     </script>
